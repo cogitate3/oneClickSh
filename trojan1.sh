@@ -120,9 +120,7 @@ EOF
 	blue "      开始下载安装官方Trojan最新版本"
 	green "=========================================="
 	sleep 3s
-	sudo bash -c "$(wget -O- https://raw.githubusercontent.com/trojan-gfw/trojan-quickstart/master/trojan-quickstart.sh)"
-	systemctl enable trojan
-	green "========================================================"
+		green "========================================================"
 	blue "本次脚本安装完成，现在进行检测"
 	green "========================================================"
 	read -s -n1 -p "现在开始检测安装情况，请按任意键继续 ... "
@@ -142,35 +140,10 @@ else
 	green "==========================="
 	sleep 3s
 fi
-if test -s /usr/local/etc/trojan/config.json; then
-	green " "
-	green " "
-	green "==========================="
-	 blue "      Trojan安装正常"
-	green "==========================="
-	sleep 3s
-else
-	green " "
-	green " "
-	green "==========================="
-	  red "     Trojan安装不成功"
-	green "==========================="
-	sleep 3s
-fi
+
 	green " "
 	green " "
 	green "========================================================"
-	 blue " 本过程安装了sudo/nginx/wget/unzip/zip/curl/tar/trojan"
 	 blue " 现在你访问 http://$your_domain 应该有伪装站点的存在了"
 	 blue " 伪装站点目录在 /usr/share/nginx/html 可自行更换网站"
-	 blue " Trojan配置文件在 /usr/local/etc/trojan"
-	 blue " 检测没有问题之后可以进行下一部分安装"
 	green "========================================================"
-else
-	green " "
-	green " "
-	red "================================"
-	red "域名解析地址与本VPS IP地址不一致"
-	red "本次安装失败，请确保域名解析正常"
-	red "================================"
-fi
