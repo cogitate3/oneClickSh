@@ -145,3 +145,4 @@ fi
 	 blue " 现在你访问 http://$your_domain 应该有伪装站点的存在了"
 	 blue " 伪装站点目录在 /usr/share/nginx/html 可自行更换网站"
 	green "========================================================"
+        sleep 3s
