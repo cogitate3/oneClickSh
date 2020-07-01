@@ -132,7 +132,6 @@ if test -s /etc/nginx/nginx.conf; then
          blue " 伪装站点目录在 /usr/share/nginx/html 可自行更换网站" 
 	green "==========================="
 	sleep 3s
-	        
 else
 	green " "
 	green " "
