@@ -128,8 +128,11 @@ if test -s /etc/nginx/nginx.conf; then
 	green " "
 	green "==========================="
 	 blue "      Nginx安装正常"
+	 blue " 现在你访问 http://$your_domain 应该有伪装站点的存在了"
+         blue " 伪装站点目录在 /usr/share/nginx/html 可自行更换网站" 
 	green "==========================="
 	sleep 3s
+	        
 else
 	green " "
 	green " "
@@ -138,11 +141,3 @@ else
 	green "==========================="
 	sleep 3s
 fi
-
-	green " "
-	green " "
-	green "========================================================"
-	 blue " 现在你访问 http://$your_domain 应该有伪装站点的存在了"
-	 blue " 伪装站点目录在 /usr/share/nginx/html 可自行更换网站"
-	green "========================================================"
-        sleep 3s
